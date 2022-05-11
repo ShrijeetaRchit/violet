@@ -56,11 +56,11 @@ def get_readable_time(seconds: int) -> str:
 buttons = [
     [
                         InlineKeyboardButton(
-                             text="🏹 Summon Me",
-                             url="https://t.me/MikuXProBot?startgroup=true"),
+                             text="🏹 Let me stay by your Side",
+                             url="https://t.me/Violetprobot?startgroup=true"),
                         InlineKeyboardButton(
-                             text="🗞️ Repo",
-                             url="https://github.com/h0daka/Miku-Nakano"),
+                             text="🗞️ Anime Stuff",
+                             url="https://t.me/anime_related_stuff"),
                     ],
                    [                  
                        InlineKeyboardButton(
@@ -214,10 +214,10 @@ def start(update: Update, context: CallbackContext):
                   [                  
                        InlineKeyboardButton(
                              text="🚑 Support",
-                             url=f"https://t.me/MikusSupport"),
+                             url=f"https://t.me/HailAkatsuki"),
                        InlineKeyboardButton(
                              text="🛰️ Updates",
-                             url="https://t.me/MikuXUpdates")
+                             url="https://t.me/Forger_updates")
                      ] 
                 ]
             ),
@@ -275,7 +275,7 @@ def help_button(update, context):
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Back",
                                        callback_data="help_back"),
                   InlineKeyboardButton(text="Support",
-                                       url="t.me/Mikussupport")]]))
+                                       url="t.me/HailAkatsuki")]]))
 
         elif prev_match:
             curr_page = int(prev_match.group(1))
@@ -322,19 +322,19 @@ def miku_callback_data(update, context):
                  \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
-                 \n❍ Miku licensed under the GNU General Public License v3.0
-                 \n❍ If you have any question about Miku, let us know at [Miku Support](t.me/{SUPPORT_CHAT}).""",
+                 \n❍ Violet licensed under the GNU General Public License v3.0
+                 \n❍ If you have any question about Violet, let us know at [Miku Support](t.me/{SUPPORT_CHAT}).""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="🌏 My Master", url="t.me/h0daka"),
+                    InlineKeyboardButton(text="🌏 My Master", url="t.me/Shrijeet_Rachit "),
                     InlineKeyboardButton(text="✨ Try Inline", switch_inline_query_current_chat="",),
                  ],
                  [
-                    InlineKeyboardButton(text="🕊️ Updates", url="t.me/MikuXUpdates"),
-                    InlineKeyboardButton(text="🚑 Support", url="t.me/Mikussupport"),
+                    InlineKeyboardButton(text="🕊️ Updates", url="t.me/Forger_updates"),
+                    InlineKeyboardButton(text="🚑 Support", url="t.me/HailAkatsuki"),
                  ],
                  [
                     InlineKeyboardButton(text="❌ Back", callback_data="miku_back")
@@ -382,7 +382,7 @@ def get_help(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                  InlineKeyboardButton(text=" Click here", url="https://t.me/MikuXProBot?start=help")
+                  InlineKeyboardButton(text=" Click here", url="https://t.me/Violetprobot?start=help")
                   ]
                 ]
             ),
@@ -399,7 +399,7 @@ def get_help(update: Update, context: CallbackContext):
                 [[InlineKeyboardButton(text="Back",
                                        callback_data="help_back"),
                   InlineKeyboardButton(text="Support",
-                                       url="t.me/Mikussupport")]]))
+                                       url="t.me/HailAKatsuki")]]))
 
     else:
         send_help(chat.id, HELP_STRINGS)
@@ -548,7 +548,7 @@ def donate(update: Update, context: CallbackContext):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True)
 
-        if OWNER_ID != 5291415314 and DONATION_LINK:
+        if OWNER_ID != 2032796168 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
@@ -597,15 +597,15 @@ def main():
                 [
                   [                  
                        InlineKeyboardButton(
-                             text="[► Summon Me◄]",
-                             url="https://t.me/MikuXProBot?startgroup=true")
+                             text="[► Ket me be your Side◄]",
+                             url="https://t.me/Violetprobot?startgroup=true")
                      ] 
                 ]
             ),
         ) 
         except Unauthorized:
             LOGGER.warning(
-                "Miku can't able to send message to support_chat, go and check!")
+                "Violet can't able to send message to support_chat, go and check!")
         except BadRequest as e:
             LOGGER.warning(e.message)
 
